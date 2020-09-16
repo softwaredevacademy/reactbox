@@ -1,4 +1,4 @@
-import PropTypes from "prop-types"
+import PropTypes from "prop-types";
 
 const orderPropType = PropTypes.shape({
   id: PropTypes.string.isRequired,
@@ -9,13 +9,13 @@ const orderPropType = PropTypes.shape({
   verification_required: PropTypes.bool.isRequired,
   location_id: PropTypes.string.isRequired,
   location_name: PropTypes.string.isRequired,
-  location_coordinate_latitude: PropTypes.string.isRequired,
-  location_coordinate_longitude: PropTypes.string.isRequired,
+  location_coordinate_latitude: PropTypes.number.isRequired,
+  location_coordinate_longitude: PropTypes.number.isRequired,
   location_status_ok: PropTypes.bool.isRequired,
   user_phone: PropTypes.string.isRequired,
   user_name: PropTypes.string.isRequired,
   notes: PropTypes.string.isRequired,
   last_updated: PropTypes.string.isRequired,
-}).isRequired
+}).isRequired;
 
-export default orderPropType
+export default orderPropType;
