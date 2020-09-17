@@ -1,11 +1,11 @@
-import React from "react"
-import PropTypes from "prop-types"
-import orderPropType from "../../utils/orderPropType"
-import { useTranslation } from "react-i18next"
-import OrderLists from "../organisms/OrderLists"
+import React from "react";
+import PropTypes from "prop-types";
+import orderPropType from "../../utils/orderPropType";
+import { useTranslation } from "react-i18next";
+import OrderLists from "../organisms/OrderLists";
 
 export default function ListView({ orders }) {
-  const { t } = useTranslation()
+  const { t } = useTranslation();
 
   return (
     <section id="list-view">
@@ -18,9 +18,9 @@ export default function ListView({ orders }) {
 
       <OrderLists orders={orders} />
     </section>
-  )
+  );
 }
 
 ListView.propTypes = {
-  orders: PropTypes.arrayOf(orderPropType).isRequired
-}
+  orders: PropTypes.arrayOf(orderPropType).isRequired,
+};

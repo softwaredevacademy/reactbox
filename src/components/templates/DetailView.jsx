@@ -1,16 +1,16 @@
-import React from "react"
-import PropTypes from "prop-types"
-import orderPropType from "../../utils/orderPropType"
-import { Link, useParams } from "react-router-dom"
-import { useTranslation } from "react-i18next"
-import FormatedTime from "../../utils/FormatedTime"
-import Map from "../molecules/Map"
-import DataField from "../molecules/DataField"
+import React from "react";
+import PropTypes from "prop-types";
+import orderPropType from "../../utils/orderPropType";
+import { Link, useParams } from "react-router-dom";
+import { useTranslation } from "react-i18next";
+import FormatedTime from "../../utils/FormatedTime";
+import Map from "../molecules/Map";
+import DataField from "../molecules/DataField";
 
 export default function DetailView({ orders }) {
-  const { parcel_id } = useParams()
-  const { t } = useTranslation()
-  const selectedOrder = orders.find((order) => order.parcel_id === parcel_id)
+  const { parcel_id } = useParams();
+  const { t } = useTranslation();
+  const selectedOrder = orders.find((order) => order.parcel_id === parcel_id);
   const {
     eta,
     last_updated,
@@ -20,12 +20,14 @@ export default function DetailView({ orders }) {
     notes,
     sender,
     verification_required,
-  } = selectedOrder
+  } = selectedOrder;
 
   return (
     <section id="detail-view">
       <header>
-        <h1>{t("detailView:title")} {sender}</h1>
+        <h1>
+          {t("detailView:title")} {sender}
+        </h1>
         <p>{t("detailView:description")}</p>
       </header>
 
@@ -51,16 +53,19 @@ export default function DetailView({ orders }) {
               label={t("detailView:labels:last_update")}
               text={FormatedTime(last_updated)}
             />
-            {notes ?
-              <DataField
-                label={t("detailView:labels:note")}
-                text={notes}
-              /> : ""}
-            {verification_required ?
+            {notes ? (
+              <DataField label={t("detailView:labels:note")} text={notes} />
+            ) : (
+              ""
+            )}
+            {verification_required ? (
               <DataField
                 label={t("detailView:labels:verification")}
                 text={t("detailView:descriptions:verification")}
-              /> : ""}
+              />
+            ) : (
+              ""
+            )}
           </article>
         </div>
       </div>
@@ -71,9 +76,9 @@ export default function DetailView({ orders }) {
         </Link>
       </footer>
     </section>
-  )
+  );
 }
 
 DetailView.propTypes = {
-  orders: PropTypes.arrayOf(orderPropType).isRequired
-}
+  orders: PropTypes.arrayOf(orderPropType).isRequired,
+};
