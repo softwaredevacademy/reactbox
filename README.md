@@ -29,7 +29,7 @@ Beside React JS and it's own dependencies, this project uses:
 1. React router to enabling the browser back button in the views.
 1. React i18: For internationalization.
 
-To see a complete diagram, check this link: [tech-stack.png.](https://www.dropbox.com/s/2ra5a1uv2qidxsf/tech-stack.png?dl=0) Currently using the "Complete stack".
+To see a complete diagram check the image called `project-structure.png` in the root folder. Currently using the "Complete stack".
 
 ---
 
@@ -38,12 +38,11 @@ To see a complete diagram, check this link: [tech-stack.png.](https://www.dropbo
 The component organization and CSS styles is done using the Atomic design methodology by Brad Frost. ([link](https://bradfrost.com/blog/post/atomic-web-design/)) This methodology is mentioned in the official React guide under File Structure. ([link](https://reactjs.org/docs/faq-structure.html#grouping-by-file-type))
 
 - The project includes the `order` prop type in the folder `ultils/orderProptype.js` to test that the components receive the information with the correct types.
-- To see the DOM tree, check this link: [view-organization.png.](https://www.dropbox.com/s/4xblo0vrpe3122a/view-organization.png?dl=0)
-- To see the design files, check this link: [design-file.sketch](https://www.dropbox.com/s/xambsg99x85xowo/design.sketch?dl=0). It require Sketch version 52.6 or superior.
-- To know more about the organization, please check the spreadsheet `Project organization.numbers`. It require Apple numbers on any macOS device.
+- To see the DOM tree, check `project-structure.png`.
+- To see the design files, check `React box design.sketch`. It require Sketch version 52.6 or superior.
+- To know more about the organization, please check the spreadsheet `Project organization.numbers`. It require Apple Numbers on any macOS device.
 
 ---
-
 ### Internationalization
 
 - I'm using [React-i18-next](https://react.i18next.com) to translate the strings from the project. The folder `src/internationalization` contains translations from English and Swedish.
