@@ -7,6 +7,8 @@ The app is composed of a list view where they can view all the parcels, and a de
 
 The project is done with the latest version of React and uses functional components with Hooks for better modularity in case it needs to be expanded.
 
+Example link: [Reactbox](https://reactbox-sda.web.app)
+
 ---
 
 ## Setup
@@ -43,6 +45,7 @@ The component organization and CSS styles is done using the Atomic design method
 - To know more about the organization, please check the spreadsheet `Project organization.numbers`. It require Apple Numbers on any macOS device.
 
 ---
+
 ### Internationalization
 
 - I'm using [React-i18-next](https://react.i18next.com) to translate the strings from the project. The folder `src/internationalization` contains translations from English and Swedish.
