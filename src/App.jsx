@@ -43,11 +43,11 @@ export default function App() {
 
   return (
     <div className="App">
-      {/* Header */}
-      <Header />
-
-      {/* Content */}
       <BrowserRouter>
+        {/* Header */}
+
+        <Header />
+        {/* Content */}
         {status === 0 && <SpinLoader />}
         {status === 1 && <MountedSwitch data={data} />}
         {status === 2 && <NoInternet />}

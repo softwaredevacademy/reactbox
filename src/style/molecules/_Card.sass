@@ -1,4 +1,4 @@
-.order-item
+.card
   display: flex
   align-items: center
   text-decoration: none
@@ -7,7 +7,7 @@
   .spacer
     flex-grow: 1 // inspired by iOS to push items to the sides
 
-  .second-content
+  .midle-content
     width: 72px
     text-align: center
 
@@ -18,31 +18,31 @@
       color: $color-secondary
       font-size: 14px
 
-  .third-content
+  .last-content
     .cta
       display: none
     .icon
       color: $color-primary
 
-.order-item:hover
+.card:hover
   background-color: $color-tertiary
   cursor: pointer
   box-shadow: 0 4px 6px 0 hsla(0, 0%, 0%, 0.2)
 
 @media screen and ( min-width: $media-larger-phablet )
-  .order-item
+  .card
     flex-direction: column
     text-align: center
     padding: $space-medium 0 0 0
     margin-bottom: 0
   
-    .second-content
+    .midle-content
       margin: $space-medium 0
 
       .icon
         font-size: 18px
 
-    .third-content
+    .last-content
       width: 100%
       height: 44px
       line-height: 44px

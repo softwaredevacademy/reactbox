@@ -8,7 +8,7 @@ export default function Card({ item }) {
   const { t } = useTranslation();
 
   return (
-    <Link className="order-item" to={`/order/${parcel_id}`}>
+    <Link className="card" to={`/order/${parcel_id}`}>
       <div className="first-content">
         <p className="description">{sender}</p>
         <p className="description-small">
