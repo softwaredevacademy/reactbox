@@ -13,15 +13,8 @@ import FormatedTime from "../utils/FormatedTime";
 export default function OrderDetail({ data }) {
   // Constants
   const { parcel_id } = useParams();
-
-  console.log("parcel_id", parcel_id);
-  console.log("data", data);
-
   const { t } = useTranslation();
   const selectedOrder = data.find((item) => item.parcel_id === parcel_id);
-
-  console.log("selectedOrder", selectedOrder);
-
   const {
     eta,
     last_updated,
