@@ -42,5 +42,5 @@ export default function Card({ item }) {
 }
 
 Card.propTypes = {
-  order: orderPropType,
+  item: orderPropType,
 };

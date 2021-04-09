@@ -12,12 +12,13 @@ import FormatedTime from "../utils/FormatedTime";
 
 export default function OrderDetail({ data }) {
   // Constants
-  const { id } = useParams();
+  const { parcel_id } = useParams();
 
-  console.log("id", id);
+  console.log("parcel_id", parcel_id);
+  console.log("data", data);
 
   const { t } = useTranslation();
-  const selectedOrder = data.find((item) => item.parcel_id === id);
+  const selectedOrder = data.find((item) => item.parcel_id === parcel_id);
 
   console.log("selectedOrder", selectedOrder);
 
@@ -77,5 +78,5 @@ export default function OrderDetail({ data }) {
 }
 
 OrderDetail.propTypes = {
-  orders: PropTypes.arrayOf(orderPropType).isRequired,
+  data: PropTypes.arrayOf(orderPropType).isRequired,
 };

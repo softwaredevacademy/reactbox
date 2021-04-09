@@ -19,7 +19,7 @@ export default function MountedSwitch({ data }) {
       </Route>
 
       {/* Package detail page */}
-      <Route path="/order/:id">
+      <Route path="/order/:parcel_id">
         <OrderDetail data={data} />
       </Route>
     </Switch>
