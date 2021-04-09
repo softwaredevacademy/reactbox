@@ -4,9 +4,9 @@ import { BrowserRouter } from "react-router-dom";
 
 // Project files
 import Header from "./components/Header";
-import NoInternet from "./components/NoInternet";
 import MountedSwitch from "./components/MountedSwitch";
-import SpinLoader from "./components/SpinLoader";
+import StatusLoading from "./components/StatusLoading";
+import StatusError from "./components/StatusError";
 import BackupOrders from "./data/backup_orders.json";
 import "./style/style.sass";
 
@@ -45,12 +45,12 @@ export default function App() {
     <div className="App">
       <BrowserRouter>
         {/* Header */}
-
         <Header />
+
         {/* Content */}
-        {status === 0 && <SpinLoader />}
+        {status === 0 && <StatusLoading />}
         {status === 1 && <MountedSwitch data={data} />}
-        {status === 2 && <NoInternet />}
+        {status === 2 && <StatusError />}
       </BrowserRouter>
     </div>
   );

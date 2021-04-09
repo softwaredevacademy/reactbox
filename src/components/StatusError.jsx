@@ -1,7 +1,7 @@
 // NPM Packages
 import { useTranslation } from "react-i18next";
 
-export default function SpinLoader() {
+export default function StatusError() {
   // Constants
   const { t } = useTranslation();
 

@@ -11,9 +11,7 @@ export default function Card({ item }) {
     <Link className="card" to={`/order/${parcel_id}`}>
       <div className="first-content">
         <p className="description">{sender}</p>
-        <p className="description-small">
-          {t("listView:item:parcel_id")} #{parcel_id}
-        </p>
+        <p className="description-small">{t("listView:item:parcel_id")} #{parcel_id}</p>
       </div>
 
       {/* Trick to make flexbox utilize all the space on mobile */}
@@ -21,9 +19,7 @@ export default function Card({ item }) {
 
       <div className="midle-content">
         <span className={`icon icon-${status}`} />
-        <p className="description-small">
-          {t(`listView:item:status:${status}`)}
-        </p>
+        <p className="description-small">{t(`listView:item:status:${status}`)}</p>
       </div>
 
       <div className="last-content">

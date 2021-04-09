@@ -25,7 +25,6 @@ export default function Header() {
 
   return (
     <header className="header">
-      {/* Logo to go home */}
       <Link to="/">
         <img src={logo} alt="Reactbox logo" title="Reactbox logo" />
       </Link>
@@ -33,7 +32,6 @@ export default function Header() {
       {/* Trick to make flexbox take all space */}
       <div className="spacer" />
 
-      {/* Change language button */}
       <button className="button-language" onClick={toggleLanguage}>
         <p className="description-small">{language}</p>
         {language === "en" && <img src={flag_en} alt="British flag" />}
@@ -42,3 +40,7 @@ export default function Header() {
     </header>
   );
 }
+
+// Note:
+// All the logic belongs to the language button.
+// If we want to further refactor, we can extract it.
