@@ -1,10 +1,10 @@
 // NPM Packages
 import React from "react";
+import { icon } from "leaflet";
+import { Map as LeafletMap, Marker, TileLayer } from "react-leaflet";
 import PropTypes from "prop-types";
 
 // Project files
-import { icon } from "leaflet";
-import { Map as LeafletMap, Marker, TileLayer } from "react-leaflet";
 import mapPin from "../assets/images/map-pin.png";
 
 export default function Map({ longitude, latitude }) {

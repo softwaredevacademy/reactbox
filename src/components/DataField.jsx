@@ -2,7 +2,7 @@
 import React from "react";
 import PropTypes from "prop-types";
 
-export default function DetailView({ label, text }) {
+export default function DataField({ label, text }) {
   return (
     <div className="data-field">
       <p className="label">{label}</p>
@@ -12,7 +12,7 @@ export default function DetailView({ label, text }) {
   );
 }
 
-DetailView.propTypes = {
+DataField.propTypes = {
   label: PropTypes.string.isRequired,
   text: PropTypes.string.isRequired,
 };

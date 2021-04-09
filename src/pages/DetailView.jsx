@@ -45,38 +45,17 @@ export default function DetailView({ orders }) {
           />
         </div>
 
+        {/* prettier-ignore */}
         <div className="column second-content">
           <article className="content-box">
-            {/* Location */}
-            <DataField
-              label={t("detailView:labels:location")}
-              text={location_name}
-            />
+            {/* Mandatory */}
+            <DataField label={t("detailView:labels:location")} text={location_name}/>
+            <DataField label={t("detailView:labels:eta")} text={FormatedTime(eta) || t("detailView:descriptions:eta")} />
+            <DataField label={t("detailView:labels:last_update")} text={FormatedTime(last_updated)} />
 
-            {/* Estimated delivery time */}
-            <DataField
-              label={t("detailView:labels:eta")}
-              text={FormatedTime(eta) || t("detailView:descriptions:eta")}
-            />
-
-            {/* Last package update */}
-            <DataField
-              label={t("detailView:labels:last_update")}
-              text={FormatedTime(last_updated)}
-            />
-
-            {/* Notes (if any) */}
-            {notes && (
-              <DataField label={t("detailView:labels:note")} text={notes} />
-            )}
-
-            {/* Verification (if required) */}
-            {verification_required && (
-              <DataField
-                label={t("detailView:labels:verification")}
-                text={t("detailView:descriptions:verification")}
-              />
-            )}
+            {/* Optionals */}
+            {notes && <DataField label={t("detailView:labels:note")} text={notes} />}
+            {verification_required && <DataField label={t("detailView:labels:verification")} text={t("detailView:descriptions:verification")} />}
           </article>
         </div>
       </div>

@@ -7,7 +7,7 @@ import { useTranslation } from "react-i18next";
 import orderPropType from "../utils/orderPropType";
 
 export default function OrderItem({ order }) {
-  // Contasnts
+  // Constants
   const { parcel_id, sender, status } = order;
   const { t } = useTranslation();
 
