@@ -9,20 +9,23 @@ import PackageDetail from "../pages/PackageDetail";
 import orderPropType from "../utils/orderPropType";
 
 // About this component
-// Mounted component extract the router from the App, so the if case scnearios look cleaner in the App.
-export default function MountedComponent({ orders }) {
+// Extract the Switch from the App, so the if case scnearios look cleaner in the App.
+export default function MountedSwitch({ data }) {
   return (
     <Switch>
+      {/* Home page */}
       <Route path="/">
-        <Home orders={orders} />
+        <Home data={data} />
       </Route>
-      <Route path="/parcel/:parcel_id">
-        <PackageDetail orders={orders} />
+
+      {/* Package detail page */}
+      <Route path="/order/:parcel_id">
+        <PackageDetail data={data} />
       </Route>
     </Switch>
   );
 }
 
-MountedComponent.propTypes = {
+MountedSwitch.propTypes = {
   orders: PropTypes.arrayOf(orderPropType).isRequired,
 };

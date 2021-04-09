@@ -6,13 +6,13 @@ import { useTranslation } from "react-i18next";
 // Project files
 import orderPropType from "../utils/orderPropType";
 
-export default function OrderItem({ order }) {
+export default function Card({ item }) {
   // Constants
-  const { parcel_id, sender, status } = order;
+  const { parcel_id, sender, status } = item;
   const { t } = useTranslation();
 
   return (
-    <Link className="order-item" to={`/parcel/${parcel_id}`}>
+    <Link className="order-item" to={`/order/${parcel_id}`}>
       {/* Left side mobile. Top part desktop  */}
       <div className="first-content">
         <p className="description">{sender}</p>
@@ -41,6 +41,6 @@ export default function OrderItem({ order }) {
   );
 }
 
-OrderItem.propTypes = {
+Card.propTypes = {
   order: orderPropType,
 };

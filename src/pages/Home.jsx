@@ -3,15 +3,15 @@ import React from "react";
 import { useTranslation } from "react-i18next";
 
 // Project files
-import OrderItem from "../components/OrderItem";
+import Card from "../components/Card";
 
-export default function Home({ orders }) {
+export default function Home({ data }) {
   // Constants
   const { t } = useTranslation();
 
   // Components
-  const ListItems = orders.map((item) => {
-    return <OrderItem key={item.parcel_id} order={item} />;
+  const CardsArray = data.map((item) => {
+    return <Card key={item.parcel_id} item={item} />;
   });
 
   return (
@@ -19,13 +19,13 @@ export default function Home({ orders }) {
       {/* Header */}
       <header>
         <h1>
-          {t("listView:title")} {orders[0].user_name}
+          {t("listView:title")} {data[0].user_name}
         </h1>
         <p>{t("listView:description")}</p>
       </header>
 
       {/* Content */}
-      <div className="order-list">{ListItems}</div>
+      <div className="order-list">{CardsArray}</div>
     </section>
   );
 }

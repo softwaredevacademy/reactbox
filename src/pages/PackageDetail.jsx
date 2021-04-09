@@ -10,11 +10,11 @@ import DataField from "../components/DataField";
 import orderPropType from "../utils/orderPropType";
 import FormatedTime from "../utils/FormatedTime";
 
-export default function PackageDetail({ orders }) {
+export default function PackageDetail({ data }) {
   // Constants
   const { parcel_id } = useParams();
   const { t } = useTranslation();
-  const selectedOrder = orders.find((order) => order.parcel_id === parcel_id);
+  const selectedOrder = data.find((item) => item.parcel_id === parcel_id);
   const {
     eta,
     last_updated,
