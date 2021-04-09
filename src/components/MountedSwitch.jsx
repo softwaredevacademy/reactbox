@@ -27,5 +27,5 @@ export default function MountedSwitch({ data }) {
 }
 
 MountedSwitch.propTypes = {
-  orders: PropTypes.arrayOf(orderPropType).isRequired,
+  data: PropTypes.arrayOf(orderPropType).isRequired,
 };

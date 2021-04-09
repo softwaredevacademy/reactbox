@@ -16,7 +16,7 @@ export default function App() {
   const [data, setData] = useState([]);
 
   // Constants
-  const DEBUG_MODE = false; // To decide if we show backup data in case of a server failure.
+  const DEBUG_MODE = true; // To decide if we show backup data in case of a server failure.
   const API_URL = "https://my.api.mockaroo.com/orders.json?key=e49e6840";
 
   // Methods

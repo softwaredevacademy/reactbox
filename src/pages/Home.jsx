@@ -11,7 +11,7 @@ export default function Home({ data }) {
 
   // Components
   const CardsArray = data.map((item) => {
-    return <Card key={item.parcel_id} item={item} />;
+    return <Card key={item.id} item={item} />;
   });
 
   return (
