@@ -17,7 +17,7 @@ export default function App() {
 
   // Constants
   const DEBUG_MODE = true; // To decide if we show backup data in case of a server failure.
-  const API_URL = "https://my.api.mockaroo.com/orders.json?key=e49e6840";
+  const API_URL = "https://my.api.mockaroo.com/orders.json?key=e49e6840"; // change the url to anything to trigger the failure
 
   // Methods
   useEffect(() => {
