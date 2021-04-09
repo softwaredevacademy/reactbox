@@ -4,7 +4,7 @@ import { BrowserRouter } from "react-router-dom";
 
 // Project files
 import Header from "./components/Header";
-import MountedSwitch from "./components/MountedSwitch";
+import SwitchLoaded from "./components/SwitchLoaded";
 import StatusLoading from "./components/StatusLoading";
 import StatusError from "./components/StatusError";
 import BackupOrders from "./data/backup_orders.json";
@@ -49,7 +49,7 @@ export default function App() {
 
         {/* Content */}
         {status === 0 && <StatusLoading />}
-        {status === 1 && <MountedSwitch data={data} />}
+        {status === 1 && <SwitchLoaded data={data} />}
         {status === 2 && <StatusError />}
       </BrowserRouter>
     </div>

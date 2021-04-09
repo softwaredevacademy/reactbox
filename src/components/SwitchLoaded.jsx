@@ -5,9 +5,7 @@ import { Switch, Route } from "react-router-dom";
 import Home from "../pages/Home";
 import OrderDetail from "../pages/OrderDetail";
 
-// About this component
-// Extract the Switch from the App, so the if case scnearios look cleaner in the App.
-export default function MountedSwitch({ data }) {
+export default function SwitchLoaded({ data }) {
   return (
     <Switch>
       {/* Home page */}
