@@ -15,7 +15,7 @@ export default function Home({ orders }) {
   });
 
   return (
-    <section id="list-view">
+    <section id="home">
       {/* Header */}
       <header>
         <h1>

@@ -27,7 +27,7 @@ export default function PackageDetail({ orders }) {
   } = selectedOrder;
 
   return (
-    <section id="detail-view">
+    <section id="package-detail">
       {/* Header */}
       <header>
         <h1>
