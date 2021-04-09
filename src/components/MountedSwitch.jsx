@@ -1,12 +1,9 @@
 // NPM Packages
-import React from "react";
 import { Switch, Route } from "react-router-dom";
-import PropTypes from "prop-types";
 
 // Project files
 import Home from "../pages/Home";
 import OrderDetail from "../pages/OrderDetail";
-import orderPropType from "../utils/orderPropType";
 
 // About this component
 // Extract the Switch from the App, so the if case scnearios look cleaner in the App.
@@ -25,7 +22,3 @@ export default function MountedSwitch({ data }) {
     </Switch>
   );
 }
-
-MountedSwitch.propTypes = {
-  data: PropTypes.arrayOf(orderPropType).isRequired,
-};

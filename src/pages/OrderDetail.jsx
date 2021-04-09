@@ -1,13 +1,10 @@
 // NPM Packages
-import React from "react";
 import { Link, useParams } from "react-router-dom";
 import { useTranslation } from "react-i18next";
-import PropTypes from "prop-types";
 
 // Project files
 import Map from "../components/Map";
 import DataField from "../components/DataField";
-import orderPropType from "../utils/orderPropType";
 import FormatedTime from "../utils/FormatedTime";
 
 export default function OrderDetail({ data }) {
@@ -69,7 +66,3 @@ export default function OrderDetail({ data }) {
     </section>
   );
 }
-
-OrderDetail.propTypes = {
-  data: PropTypes.arrayOf(orderPropType).isRequired,
-};

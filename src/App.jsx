@@ -1,12 +1,12 @@
 // NPM Packages
-import React, { useState, useEffect } from "react";
+import { useState, useEffect } from "react";
 import { BrowserRouter } from "react-router-dom";
-import NoInternet from "./components/NoInternet";
 
 // Project files
-import SpinLoader from "./components/SpinLoader";
 import Header from "./components/Header";
+import NoInternet from "./components/NoInternet";
 import MountedSwitch from "./components/MountedSwitch";
+import SpinLoader from "./components/SpinLoader";
 import BackupOrders from "./data/backup_orders.json";
 import "./style/style.sass";
 
