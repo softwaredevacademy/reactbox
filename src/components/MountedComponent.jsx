@@ -1,10 +1,12 @@
+// NPM Packages
 import React from "react";
 import PropTypes from "prop-types";
-import orderPropType from "../../utils/orderPropType";
 import { Switch, Route } from "react-router-dom";
-import DetailView from "../templates/DetailView";
-import ListView from "../templates/ListView";
-import App from "../../App";
+
+// Project files
+import orderPropType from "../../utils/orderPropType";
+import DetailView from "./pages/DetailView";
+import ListView from "./pages/ListView";
 
 // About this component
 // Mounted component extract the router from the App, so the if case scnearios look cleaner in the App.

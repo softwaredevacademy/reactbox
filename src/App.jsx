@@ -1,28 +1,34 @@
+// NPM Packages
 import React, { useState, useEffect } from "react";
 import { BrowserRouter as Router } from "react-router-dom";
 import NoInternet from "./components/molecules/NoInternet";
-import SpinLoader from "./components/molecules/SpinLoader";
-import Header from "./components/organisms/Header";
-import MountedComponent from "./components/organisms/MountedComponent";
+
+// Project files
+import SpinLoader from "./components/SpinLoader";
+import Header from "./components/Header";
+import MountedComponent from "./components/MountedComponent";
 import "./style/style.sass";
 
 export default function App() {
-  // dataStatus: 0 = "loading", 1 = "data ok", 2 = "data error"
-  const [dataStatus, setDataStatus] = useState(0);
+  // Local state
+  const [status, setStatus] = useState(0); // 0 = "loading", 1 = "data ok", 2 = "data error"
   const [orders, setOrders] = useState([]);
-  const END_POINT = "https://my.api.mockaroo.com/orders.json?key=e49e6840";
 
+  // Constants
+  const API_URL = "https://my.api.mockaroo.com/orders.json?key=e49e6840";
+
+  // Methods
   useEffect(() => {
     const getData = async () => {
       try {
-        const response = await fetch(END_POINT, { mode: "cors" });
+        const response = await fetch(API_URL, { mode: "cors" });
         const data = await response.json();
         console.log("data");
         console.log(data);
         setOrders(data);
-        setDataStatus(1);
+        setStatus(1);
       } catch {
-        setDataStatus(2);
+        setStatus(2);
       }
     };
 
@@ -32,10 +38,13 @@ export default function App() {
   return (
     <Router>
       <div className="App">
+        {/* Header */}
         <Header />
-        {dataStatus === 0 ? <SpinLoader /> : ""}
-        {dataStatus === 1 ? <MountedComponent orders={orders} /> : ""}
-        {dataStatus === 2 ? <NoInternet /> : ""}
+
+        {/* Content */}
+        {status === 0 ? <SpinLoader /> : ""}
+        {status === 1 ? <MountedComponent orders={orders} /> : ""}
+        {status === 2 ? <NoInternet /> : ""}
       </div>
     </Router>
   );

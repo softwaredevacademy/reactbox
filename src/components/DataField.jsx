@@ -1,5 +1,6 @@
-import React from "react"
-import PropTypes from "prop-types"
+// NPM Packages
+import React from "react";
+import PropTypes from "prop-types";
 
 export default function DetailView({ label, text }) {
   return (
@@ -8,10 +9,10 @@ export default function DetailView({ label, text }) {
       <p className="description">{text}</p>
       <hr />
     </div>
-  )
+  );
 }
 
 DetailView.propTypes = {
   label: PropTypes.string.isRequired,
   text: PropTypes.string.isRequired,
-}
+};
