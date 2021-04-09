@@ -48,12 +48,12 @@ export default function OrderDetail({ data }) {
         {/* prettier-ignore */}
         <div className="column second-content">
           <article className="content-box">
-            {/* Mandatory */}
+            {/* Mandatory fields */}
             <DataField label={t("detailView:labels:location")} text={location_name}/>
             <DataField label={t("detailView:labels:eta")} text={FormatedTime(eta) || t("detailView:descriptions:eta")} />
             <DataField label={t("detailView:labels:last_update")} text={FormatedTime(last_updated)} />
 
-            {/* Optionals */}
+            {/* Optional fields */}
             {notes && <DataField label={t("detailView:labels:note")} text={notes} />}
             {verification_required && <DataField label={t("detailView:labels:verification")} text={t("detailView:descriptions:verification")} />}
           </article>
