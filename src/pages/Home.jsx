@@ -5,7 +5,7 @@ import { useTranslation } from "react-i18next";
 import Card from "../components/Card";
 
 export default function Home({ data }) {
-  // Constants
+  // Global state
   const { t } = useTranslation();
 
   // Components
@@ -17,9 +17,7 @@ export default function Home({ data }) {
     <section id="home">
       {/* Header */}
       <header>
-        <h1>
-          {t("listView:title")} {data[0].user_name}
-        </h1>
+        <h1>{t("listView:title")} {data[0].user_name}</h1>
         <p>{t("listView:description")}</p>
       </header>
 

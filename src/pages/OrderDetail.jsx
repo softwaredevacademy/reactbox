@@ -8,9 +8,11 @@ import DataField from "../components/DataField";
 import FormatedTime from "../utils/FormatedTime";
 
 export default function OrderDetail({ data }) {
-  // Constants
-  const { parcel_id } = useParams();
+  // Global state
   const { t } = useTranslation();
+  const { parcel_id } = useParams();
+
+  // Constants
   const selectedOrder = data.find((item) => item.parcel_id === parcel_id);
   const {
     eta,

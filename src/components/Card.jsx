@@ -3,9 +3,11 @@ import { Link } from "react-router-dom";
 import { useTranslation } from "react-i18next";
 
 export default function Card({ item }) {
+  // Global state
+  const { t } = useTranslation();
+  
   // Constants
   const { parcel_id, sender, status } = item;
-  const { t } = useTranslation();
 
   return (
     <Link className="card" to={`/order/${parcel_id}`}>

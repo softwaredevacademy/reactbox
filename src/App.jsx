@@ -16,8 +16,8 @@ export default function App() {
   const [data, setData] = useState([]);
 
   // Constants
-  const DEBUG_MODE = true; // To decide if we show backup data in case of a server failure.
-  const API_URL = "https://my.api.mockaroo.com/orders.json?key=e49e6840"; // change the url xwto trigger a failure status
+  const DEBUG_MODE = false; // To decide if we show backup data in case of a server failure.
+  const API_URL = "https://mdddy.api.mockaroo.com/orders.json?key=e49e6840"; // change the url xwto trigger a failure status
 
   // Methods
   useEffect(() => {

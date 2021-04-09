@@ -2,7 +2,7 @@
 import { useTranslation } from "react-i18next";
 
 export default function StatusLoading() {
-  // Constants
+  // Global state
   const { t } = useTranslation();
 
   return (
