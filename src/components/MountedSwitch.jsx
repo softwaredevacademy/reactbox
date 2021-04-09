@@ -14,12 +14,12 @@ export default function MountedSwitch({ data }) {
   return (
     <Switch>
       {/* Home page */}
-      <Route path="/">
+      <Route path="/" exact>
         <Home data={data} />
       </Route>
 
       {/* Package detail page */}
-      <Route path="/order/:parcel_id">
+      <Route path="/order/:id">
         <PackageDetail data={data} />
       </Route>
     </Switch>

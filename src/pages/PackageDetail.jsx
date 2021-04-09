@@ -12,9 +12,9 @@ import FormatedTime from "../utils/FormatedTime";
 
 export default function PackageDetail({ data }) {
   // Constants
-  const { parcel_id } = useParams();
+  const { id } = useParams();
   const { t } = useTranslation();
-  const selectedOrder = data.find((item) => item.parcel_id === parcel_id);
+  const selectedOrder = data.find((item) => item.parcel_id === id);
   const {
     eta,
     last_updated,
