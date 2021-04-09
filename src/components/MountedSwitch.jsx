@@ -5,7 +5,7 @@ import PropTypes from "prop-types";
 
 // Project files
 import Home from "../pages/Home";
-import PackageDetail from "../pages/PackageDetail";
+import OrderDetail from "../pages/OrderDetail";
 import orderPropType from "../utils/orderPropType";
 
 // About this component
@@ -20,7 +20,7 @@ export default function MountedSwitch({ data }) {
 
       {/* Package detail page */}
       <Route path="/order/:id">
-        <PackageDetail data={data} />
+        <OrderDetail data={data} />
       </Route>
     </Switch>
   );

@@ -1,7 +1,7 @@
 import PropTypes from "prop-types";
 
 const orderPropType = PropTypes.shape({
-  id: PropTypes.string.isRequired,
+  id: PropTypes.number.isRequired,
   status: PropTypes.string.isRequired,
   eta: PropTypes.string,
   parcel_id: PropTypes.string.isRequired,
@@ -14,7 +14,7 @@ const orderPropType = PropTypes.shape({
   location_status_ok: PropTypes.bool.isRequired,
   user_phone: PropTypes.string.isRequired,
   user_name: PropTypes.string.isRequired,
-  notes: PropTypes.string.isRequired,
+  notes: PropTypes.string,
   last_updated: PropTypes.string.isRequired,
 }).isRequired;
 

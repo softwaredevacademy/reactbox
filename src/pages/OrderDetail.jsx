@@ -10,7 +10,7 @@ import DataField from "../components/DataField";
 import orderPropType from "../utils/orderPropType";
 import FormatedTime from "../utils/FormatedTime";
 
-export default function PackageDetail({ data }) {
+export default function OrderDetail({ data }) {
   // Constants
   const { id } = useParams();
 
@@ -33,7 +33,7 @@ export default function PackageDetail({ data }) {
   } = selectedOrder;
 
   return (
-    <section id="package-detail">
+    <section id="order-detail">
       {/* Header */}
       <header>
         <h1>
@@ -76,6 +76,6 @@ export default function PackageDetail({ data }) {
   );
 }
 
-PackageDetail.propTypes = {
+OrderDetail.propTypes = {
   orders: PropTypes.arrayOf(orderPropType).isRequired,
 };
