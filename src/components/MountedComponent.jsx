@@ -4,8 +4,8 @@ import { Switch, Route } from "react-router-dom";
 import PropTypes from "prop-types";
 
 // Project files
-import DetailView from "../pages/DetailView";
-import ListView from "../pages/ListView";
+import Home from "../pages/Home";
+import PackageDetail from "../pages/PackageDetail";
 import orderPropType from "../utils/orderPropType";
 
 // About this component
@@ -13,11 +13,11 @@ import orderPropType from "../utils/orderPropType";
 export default function MountedComponent({ orders }) {
   return (
     <Switch>
-      <Route path="/parcel/:parcel_id">
-        <DetailView orders={orders} />
-      </Route>
       <Route path="/">
-        <ListView orders={orders} />
+        <Home orders={orders} />
+      </Route>
+      <Route path="/parcel/:parcel_id">
+        <PackageDetail orders={orders} />
       </Route>
     </Switch>
   );

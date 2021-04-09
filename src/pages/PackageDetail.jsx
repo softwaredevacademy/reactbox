@@ -10,7 +10,7 @@ import DataField from "../components/DataField";
 import orderPropType from "../utils/orderPropType";
 import FormatedTime from "../utils/FormatedTime";
 
-export default function DetailView({ orders }) {
+export default function PackageDetail({ orders }) {
   // Constants
   const { parcel_id } = useParams();
   const { t } = useTranslation();

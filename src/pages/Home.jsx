@@ -5,7 +5,7 @@ import { useTranslation } from "react-i18next";
 // Project files
 import OrderItem from "../components/OrderItem";
 
-export default function ListView({ orders }) {
+export default function Home({ orders }) {
   // Constants
   const { t } = useTranslation();
 

@@ -7,6 +7,7 @@ import NoInternet from "./components/NoInternet";
 import SpinLoader from "./components/SpinLoader";
 import Header from "./components/Header";
 import MountedComponent from "./components/MountedComponent";
+import BackupOrders from "./data/orders.json";
 import "./style/style.sass";
 
 export default function App() {
@@ -15,25 +16,30 @@ export default function App() {
   const [orders, setOrders] = useState([]);
 
   // Constants
+  const DEBUG_MODE = true; // To decide if we show backup data in case of a server failure.
   const API_URL = "https://my.api.mockaroo.com/orders.json?key=e49e6840";
 
   // Methods
   useEffect(() => {
-    const getData = async () => {
-      try {
-        const response = await fetch(API_URL, { mode: "cors" });
-        const data = await response.json();
-        console.log("data");
-        console.log(data);
-        setOrders(data);
-        setStatus(1);
-      } catch {
-        setStatus(2);
-      }
-    };
+    fetch(API_URL, { mode: "cors" })
+      .then((response) => response.json())
+      .then((json) => onSucess(json))
+      .catch((error) => onFail(error));
+  }, [setStatus, setOrders]);
 
-    getData();
-  }, []);
+  function onSucess(json) {
+    setOrders(json);
+    setStatus(1);
+  }
+
+  function onFail() {
+    if (DEBUG_MODE) {
+      setOrders(BackupOrders);
+      setStatus(1);
+    } else {
+      setStatus(2);
+    }
+  }
 
   return (
     <Router>
