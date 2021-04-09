@@ -1,11 +1,11 @@
 import React from "react";
 import PropTypes from "prop-types";
-import orderPropType from "../../utils/orderPropType";
+import orderPropType from "../utils/orderPropType";
 import { Link, useParams } from "react-router-dom";
 import { useTranslation } from "react-i18next";
-import FormatedTime from "../../utils/FormatedTime";
-import Map from "../molecules/Map";
-import DataField from "../molecules/DataField";
+import FormatedTime from "../utils/FormatedTime";
+import Map from "../components/molecules/Map";
+import DataField from "../components/DataField";
 
 export default function DetailView({ orders }) {
   const { parcel_id } = useParams();

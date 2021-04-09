@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
-import i18n from "../../utils/i18n";
+import i18n from "../utils/i18n";
 import logo from "../../assets/images/logo.svg";
 import flag_en from "../../assets/images/flag_en.svg";
 import flag_se from "../../assets/images/flag_se.svg";
