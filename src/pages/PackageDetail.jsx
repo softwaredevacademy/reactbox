@@ -70,6 +70,6 @@ export default function PackageDetail({ orders }) {
   );
 }
 
-DetailView.propTypes = {
+PackageDetail.propTypes = {
   orders: PropTypes.arrayOf(orderPropType).isRequired,
 };
