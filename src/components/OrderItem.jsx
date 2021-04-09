@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 import { useTranslation } from "react-i18next";
 
 // Project files
-import orderPropType from "../../utils/orderPropType";
+import orderPropType from "../utils/orderPropType";
 
 export default function OrderItem({ order }) {
   // Contasnts

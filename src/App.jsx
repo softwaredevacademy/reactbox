@@ -1,7 +1,7 @@
 // NPM Packages
 import React, { useState, useEffect } from "react";
 import { BrowserRouter as Router } from "react-router-dom";
-import NoInternet from "./components/molecules/NoInternet";
+import NoInternet from "./components/NoInternet";
 
 // Project files
 import SpinLoader from "./components/SpinLoader";

@@ -1,10 +1,9 @@
 // NPM Packages
 import React from "react";
-import PropTypes from "prop-types";
+import { useTranslation } from "react-i18next";
 
 // Project files
-import orderPropType from "../../utils/orderPropType";
-import { useTranslation } from "react-i18next";
+import OrderItem from "../components/OrderItem";
 
 export default function ListView({ orders }) {
   // Constants
@@ -30,7 +29,3 @@ export default function ListView({ orders }) {
     </section>
   );
 }
-
-OrderList.propTypes = {
-  orders: PropTypes.arrayOf(orderPropType).isRequired,
-};
