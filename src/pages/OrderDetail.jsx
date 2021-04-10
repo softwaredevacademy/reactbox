@@ -4,8 +4,7 @@ import { useTranslation } from "react-i18next";
 
 // Project files
 import Map from "../components/Map";
-import DataField from "../components/DataField";
-import FormatedTime from "../utils/FormatedTime";
+import OrderInformation from "../components/OrderInformation";
 
 export default function OrderDetail({ data }) {
   // Global state
@@ -15,55 +14,25 @@ export default function OrderDetail({ data }) {
   // Constants
   const selectedOrder = data.find((item) => item.parcel_id === parcel_id);
   const {
-    eta,
-    last_updated,
-    location_coordinate_latitude,
-    location_coordinate_longitude,
-    location_name,
-    notes,
+    location_coordinate_latitude: latitude,
+    location_coordinate_longitude: longitude,
     sender,
-    verification_required,
   } = selectedOrder;
 
   return (
     <section id="order-detail">
-      {/* Header */}
       <header>
-        <h1>
-          {t("detailView:title")} {sender}
-        </h1>
+        <h1>{t("detailView:title")} {sender}</h1>
         <p>{t("detailView:description")}</p>
       </header>
 
-      {/* Content */}
-      <div className="columns">
-        <div className="column first-content">
-          <Map
-            latitude={location_coordinate_latitude}
-            longitude={location_coordinate_longitude}
-          />
-        </div>
-
-        {/* prettier-ignore */}
-        <div className="column second-content">
-          <article className="content-box">
-            {/* Mandatory fields */}
-            <DataField label={t("detailView:labels:location")} text={location_name}/>
-            <DataField label={t("detailView:labels:eta")} text={FormatedTime(eta) || t("detailView:descriptions:eta")} />
-            <DataField label={t("detailView:labels:last_update")} text={FormatedTime(last_updated)} />
-
-            {/* Optional fields */}
-            {notes && <DataField label={t("detailView:labels:note")} text={notes} />}
-            {verification_required && <DataField label={t("detailView:labels:verification")} text={t("detailView:descriptions:verification")} />}
-          </article>
-        </div>
+      <div className="grid">
+        <Map coordinates={[latitude, longitude]} />
+        <OrderInformation order={selectedOrder} />
       </div>
 
-      {/* Footer */}
       <footer className="footer">
-        <Link className="button" to="/">
-          {t("detailView:button-label")}
-        </Link>
+        <Link className="button" to="/">{t("detailView:button-label")}</Link>
       </footer>
     </section>
   );
