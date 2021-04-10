@@ -29,7 +29,6 @@ export default function Header() {
         <img src={logo} alt="Reactbox logo" title="Reactbox logo" />
       </Link>
 
-      {/* Trick to make flexbox take all space */}
       <div className="flexbox-expand-space" />
 
       <button className="button-language" onClick={toggleLanguage}>
