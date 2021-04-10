@@ -5,23 +5,24 @@ import { useTranslation } from "react-i18next";
 export default function Card({ item }) {
   // Global state
   const { t } = useTranslation();
-  
+
   // Constants
   const { parcel_id, sender, status } = item;
+  const textParcel = t("listView:item:parcel_id") + parcel_id;
+  const textStatus = t(`listView:item:status: ${status}`);
 
   return (
     <Link className="card" to={`/order/${parcel_id}`}>
       <div className="first-content">
         <p className="description">{sender}</p>
-        <p className="description-small">{t("listView:item:parcel_id")} #{parcel_id}</p>
+        <p className="description-small">{textParcel}</p>
       </div>
 
-      {/* Trick to make flexbox utilize all the space on mobile */}
-      <div className="spacer" />
+      <div className="flexbox-expand-space" />
 
       <div className="midle-content">
         <span className={`icon icon-${status}`} />
-        <p className="description-small">{t(`listView:item:status:${status}`)}</p>
+        <p className="description-small">{textStatus}</p>
       </div>
 
       <div className="last-content">

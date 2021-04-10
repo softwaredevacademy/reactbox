@@ -30,7 +30,7 @@ export default function Header() {
       </Link>
 
       {/* Trick to make flexbox take all space */}
-      <div className="spacer" />
+      <div className="flexbox-expand-space" />
 
       <button className="button-language" onClick={toggleLanguage}>
         <p className="description-small">{language}</p>
