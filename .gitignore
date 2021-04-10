@@ -37,3 +37,6 @@ Thumbs.db
 *.flv
 *.mov
 *.wmv
+
+# ESLint
+.eslintcache
