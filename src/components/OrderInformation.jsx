@@ -20,7 +20,7 @@ export default function OrderInformation({ order }) {
 
   // prettier-ignore
   return (
-    <div>
+    <div className="content-box">
       {/* Mandatory fields */}
       <DataField label={t("detailView:labels:location")} text={location_name} />
       <DataField label={t("detailView:labels:eta")} text={FormatedTime(eta) || t("detailView:descriptions:eta")} />

@@ -11,10 +11,10 @@
       hr
         display: none
 
-  .content-box:first-child
-    // to make it look "glued" to the map
-    border-top-left-radius: 0
-    border-top-right-radius: 0
+    &:first-child
+      // to make it look "glued" to the map
+      border-top-left-radius: 0
+      border-top-right-radius: 0
 
   .map
     z-index: 500 // to force the redraw of border-radius
@@ -29,11 +29,11 @@
       display: flex
       min-height: 500px
 
-      .first-content
+      &:first-child
         order: 2
         width: 100% // to force the map to play along flexbox
       
-      .second-content
+      &:last-child
         order: 1
         width: 400px
         margin-right: $space-big

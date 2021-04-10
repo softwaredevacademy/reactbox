@@ -26,7 +26,7 @@ export default function OrderDetail({ data }) {
         <p>{t("detailView:description")}</p>
       </header>
 
-      <div className="grid">
+      <div className="columns">
         <Map coordinates={[latitude, longitude]} />
         <OrderInformation order={selectedOrder} />
       </div>
