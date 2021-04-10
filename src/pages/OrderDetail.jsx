@@ -17,8 +17,8 @@ export default function OrderDetail({ data }) {
   const {
     eta,
     last_updated,
-    location_coordinate_latitude,
-    location_coordinate_longitude,
+    location_coordinate_latitude: latitude,
+    location_coordinate_longitude: longitude,
     location_name,
     notes,
     sender,
@@ -37,10 +37,7 @@ export default function OrderDetail({ data }) {
 
       {/* Content */}
       <div className="columns">
-        <Map
-          latitude={location_coordinate_latitude}
-          longitude={location_coordinate_longitude}
-        />
+        <Map coordinates={[latitude, longitude]} />
 
         {/* prettier-ignore */}
         <div className="content-box">
