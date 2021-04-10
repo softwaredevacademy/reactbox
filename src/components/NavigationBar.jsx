@@ -8,7 +8,7 @@ import flag_se from "../assets/images/flag_se.svg";
 import logo from "../assets/images/logo.svg";
 import i18n from "../utils/i18n";
 
-export default function Header() {
+export default function NavigationBar() {
   // Local state
   const [language, setLanguage] = useState("en");
 
@@ -24,7 +24,7 @@ export default function Header() {
   }
 
   return (
-    <header className="header">
+    <nav id="navigation-bar">
       <Link to="/">
         <img src={logo} alt="Reactbox logo" title="Reactbox logo" />
       </Link>
@@ -36,7 +36,7 @@ export default function Header() {
         {language === "en" && <img src={flag_en} alt="British flag" />}
         {language === "se" && <img src={flag_se} alt="Swedish flag" />}
       </button>
-    </header>
+    </nav>
   );
 }
 

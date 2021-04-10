@@ -3,7 +3,7 @@ import { useState, useEffect } from "react";
 import { BrowserRouter } from "react-router-dom";
 
 // Project files
-import Header from "./components/Header";
+import NavigationBar from "./components/NavigationBar";
 import SwitchLoaded from "./components/SwitchLoaded";
 import StatusLoading from "./components/StatusLoading";
 import StatusError from "./components/StatusError";
@@ -44,8 +44,8 @@ export default function App() {
   return (
     <div className="App">
       <BrowserRouter>
-        {/* Header */}
-        <Header />
+        {/* Navigation bar */}
+        <NavigationBar />
 
         {/* Content */}
         {status === 0 && <StatusLoading />}

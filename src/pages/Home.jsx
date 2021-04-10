@@ -8,6 +8,9 @@ export default function Home({ data }) {
   // Global state
   const { t } = useTranslation();
 
+  // Const
+  const userGreet = `${t("listView:title")} ${data[0].user_name}`;
+
   // Components
   const CardsArray = data.map((item) => {
     return <Card key={item.id} item={item} />;
@@ -17,7 +20,7 @@ export default function Home({ data }) {
     <section id="home">
       {/* Header */}
       <header>
-        <h1>{t("listView:title")} {data[0].user_name}</h1>
+        <h1>{userGreet}</h1>
         <p>{t("listView:description")}</p>
       </header>
 
