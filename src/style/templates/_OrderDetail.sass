@@ -4,21 +4,18 @@
   .columns
     margin-bottom: $space-medium
 
-  .content-box
-    @include content-box
-
-    .data-field:last-child
-      hr
-        display: none
-
-    &:first-child
-      // to make it look "glued" to the map
-      border-top-left-radius: 0
-      border-top-right-radius: 0
-
   .map
     z-index: 500 // to force the redraw of border-radius
     border-radius: $radius $radius 0 0
+  
+  .content-box
+    @include content-box
+    border-top-left-radius: 0
+    border-top-right-radius: 0
+
+    .data-field:last-child
+      hr
+        display: none 
 
   .footer
     text-align: center
@@ -27,25 +24,19 @@
   #order-detail
     .columns
       display: flex
-      min-height: 500px
 
-      &:first-child
+      .map
         order: 2
         width: 100% // to force the map to play along flexbox
-      
-      &:last-child
+        height: 480px // to force the map to play along flexbox
+        border-radius: $radius
+
+      .content-box
         order: 1
         width: 400px
+        border-radius: $radius
         margin-right: $space-big
-
-    .content-box:first-child
-      border-radius: $radius
-
-    .content-box
-      margin-bottom: 0
-
-    .map
-      border-radius: $radius
+        margin-bottom: 0
 
     .footer
       text-align: right

@@ -9,7 +9,7 @@ export default function Card({ item }) {
   // Constants
   const { parcel_id, sender, status } = item;
   const textParcel = `${t("listView:item:parcel_id")} #${parcel_id}`;
-  const textStatus = t(`listView:item:status: ${status}`);
+  const textStatus = t(`listView:item:status:${status}`);
 
   return (
     <Link className="card" to={`/order/${parcel_id}`}>
