@@ -39,16 +39,31 @@ export default function OrderDetail({ data }) {
       <div className="columns">
         <Map coordinates={[latitude, longitude]} />
 
-        {/* prettier-ignore */}
         <div className="content-box">
           {/* Mandatory fields */}
-          <DataField label={t("detailView:labels:location")} text={location_name}/>
-          <DataField label={t("detailView:labels:eta")} text={FormatedTime(eta) || t("detailView:descriptions:eta")} />
-          <DataField label={t("detailView:labels:last_update")} text={FormatedTime(last_updated)} />
+          <DataField
+            label={t("detailView:labels:location")}
+            text={location_name}
+          />
+          <DataField
+            label={t("detailView:labels:eta")}
+            text={FormatedTime(eta) || t("detailView:descriptions:eta")}
+          />
+          <DataField
+            label={t("detailView:labels:last_update")}
+            text={FormatedTime(last_updated)}
+          />
 
           {/* Optional fields */}
-          {notes && <DataField label={t("detailView:labels:note")} text={notes} />}
-          {verification_required && <DataField label={t("detailView:labels:verification")} text={t("detailView:descriptions:verification")} />}
+          {notes && (
+            <DataField label={t("detailView:labels:note")} text={notes} />
+          )}
+          {verification_required && (
+            <DataField
+              label={t("detailView:labels:verification")}
+              text={t("detailView:descriptions:verification")}
+            />
+          )}
         </div>
       </div>
 
