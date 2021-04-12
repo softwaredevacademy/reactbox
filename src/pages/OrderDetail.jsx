@@ -4,7 +4,6 @@ import { useTranslation } from "react-i18next";
 
 // Project files
 import Map from "../components/Map";
-import DataField from "../components/DataField";
 import FormatedTime from "../utils/FormatedTime";
 
 export default function OrderDetail({ data }) {
@@ -41,28 +40,52 @@ export default function OrderDetail({ data }) {
 
         <div className="content-box">
           {/* Mandatory fields */}
-          <DataField
-            label={t("detailView:labels:location")}
-            text={location_name}
-          />
-          <DataField
-            label={t("detailView:labels:eta")}
-            text={FormatedTime(eta) || t("detailView:descriptions:eta")}
-          />
-          <DataField
-            label={t("detailView:labels:last_update")}
-            text={FormatedTime(last_updated)}
-          />
+          {/* -- Location name */}
+          <div className="data-field">
+            <small className="label">{t("detailView:labels:location")}</small>
+            <p className="description">{location_name}</p>
+            <hr />
+          </div>
+
+          {/* -- Estimate delivery time */}
+          <div className="data-field">
+            <small className="label">{t("detailView:labels:eta")}</small>
+            <p className="description">
+              {FormatedTime(eta) || t("detailView:descriptions:eta")}
+            </p>
+            <hr />
+          </div>
+
+          {/* -- Last update */}
+          <div className="data-field">
+            <small className="label">
+              {t("detailView:labels:last_update")}
+            </small>
+            <p className="description">{FormatedTime(last_updated)}</p>
+            <hr />
+          </div>
 
           {/* Optional fields */}
+          {/* -- Notes */}
           {notes && (
-            <DataField label={t("detailView:labels:note")} text={notes} />
+            <div className="data-field">
+              <small className="label">{t("detailView:labels:note")}</small>
+              <p className="description">{notes}</p>
+              <hr />
+            </div>
           )}
+
+          {/* -- Verification required? */}
           {verification_required && (
-            <DataField
-              label={t("detailView:labels:verification")}
-              text={t("detailView:descriptions:verification")}
-            />
+            <div className="data-field">
+              <small className="label">
+                {t("detailView:labels:verification")}
+              </small>
+              <p className="description">
+                {t("detailView:descriptions:verification")}
+              </p>
+              <hr />
+            </div>
           )}
         </div>
       </div>
